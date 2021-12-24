@@ -15,6 +15,7 @@ Example in Haskell:
 -}
 
 {-MY SOLUTION(S)-}
+-- Assuming 0-idex
 myEltAt :: [a] -> Int -> a
 myEltAt [] _ = error "No empty list please"
 myEltAt (x:xs) i
