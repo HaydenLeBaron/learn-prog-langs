@@ -14,7 +14,7 @@ myLength1 :: [a] -> Int
 myLength1 l = recur l 0
   where
     recur [] acc = acc
-    recur (x:xs) acc = recur xs (acc + 1)
+    recur (_:xs) acc = recur xs (acc + 1)
 
 myLength2 :: [a] -> Int
 myLength2 l =
