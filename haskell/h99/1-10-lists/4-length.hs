@@ -24,7 +24,7 @@ myLength2 l =
 
 myLength3 l = foldl (+) 0 $ map (const 1) l
 
-myLength4 l = foldl (\x _ -> x + 1) 0 l
+myLength4 l = foldl (\acc _ -> acc + 1) 0 l
 
 {-COMMUNITY SOLUTION(S)-}
 {-

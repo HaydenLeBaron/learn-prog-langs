@@ -60,7 +60,8 @@ flatten4 = reverse . rec []
   rec acc (List []) = acc
   rec acc (Elem x)  = x:acc
   rec acc (List (x:xs)) = rec (rec acc x) (List xs)
-or making NestedList an instance of Foldable:
+--or making NestedList an instance of Foldable:
+
 import qualified Data.Foldable as F
 instance F.Foldable NestedList where
   foldMap f (Elem x)  = f x
