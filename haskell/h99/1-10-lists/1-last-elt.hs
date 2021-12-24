@@ -11,7 +11,6 @@ Example in Haskell:
 λ> myLast ['x','y','z']
 'z'
 -}
-
 {-My original solution:-}
 myLast :: [a] -> a
 myLast [] = error "Can't give an empty list"
@@ -31,8 +30,5 @@ myLast''' = head . reverse -- (head . reverse) x === (head (reverse x))
 
 myLast'''' = foldl1 (curry snd)
 
-myLast''''' [] = error "No end for empty lists!"  
-myLast''''' x = x !! (length x -1)
-
-
-
+myLast''''' [] = error "No end for empty lists!"
+myLast''''' x = x !! (length x - 1)
